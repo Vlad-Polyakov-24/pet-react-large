@@ -1,0 +1,27 @@
+.navLink {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  text-underline-offset: 3px;
+
+  &.active {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    pointer-events: none;
+  }
+
+  &.primary {
+    color: var(--primary-color);
+  }
+
+  &.secondary {
+    color: var(--inverted-secondary-color);
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+

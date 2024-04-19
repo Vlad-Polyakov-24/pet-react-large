@@ -1,0 +1,21 @@
+.btn {
+  position: relative;
+  display: block;
+  cursor: pointer;
+
+  &--default {
+    width: 100%;
+    max-width: 150px;
+    padding: 5px;
+    border: 2px solid var(--inverted-primary-color);
+    border-radius: 5px;
+    color: var(--inverted-secondary-color);
+  }
+
+  svg, path {
+    display: block;
+    width: 100%;
+    max-width: max-content;
+    height: 100%;
+  }
+}

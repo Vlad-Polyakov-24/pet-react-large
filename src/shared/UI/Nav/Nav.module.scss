@@ -1,0 +1,18 @@
+.nav {
+  flex-shrink: 0;
+
+  &--header {
+
+  }
+  &--footer {
+    .nav__list {
+      gap: 20px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 10px;
+    height: 100%;
+  }
+}

@@ -1,0 +1,11 @@
+.theme-switcher {
+  max-width: 50px;
+
+  &.light {
+    color: #FFC700;
+  }
+
+  &.dark {
+    color: #0115C6;
+  }
+}
