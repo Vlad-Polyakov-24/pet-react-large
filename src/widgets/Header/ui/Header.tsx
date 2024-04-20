@@ -1,9 +1,7 @@
-import React from 'react';
 import styles from './Header.module.scss';
 import { Link } from 'react-router-dom';
 import { classNames } from 'shared/lib/classNames/classNames';
-import Nav from 'shared/UI/Nav/Nav';
-import ThemeSwitcher from 'shared/UI/ThemeSwitcher/ThemeSwitcher';
+import { Nav } from 'features/Nav';
 import Logo from 'shared/assets/icons/logo.svg';
 
 interface HeaderProps {
