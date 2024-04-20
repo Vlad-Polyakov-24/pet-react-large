@@ -1,9 +1,9 @@
 import styles from './Footer.module.scss';
 import { Link } from 'react-router-dom';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { Nav } from 'features/Nav';
 import Container from 'shared/ui/Container/Container';
-import ThemeSwitcher from 'shared/ui/ThemeSwitcher/ThemeSwitcher';
+import { Nav } from 'features/Nav';
+import { ThemeSwitcher } from 'features/ThemeSwitcher';
 import Logo from 'shared/assets/icons/logo.svg';
 
 interface FooterProps {
