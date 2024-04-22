@@ -5,34 +5,36 @@ import Button, { ThemeButton } from 'shared/ui/Button/Button';
 import { ThemeSwitcher } from 'features/ThemeSwitcher';
 import { LangSwitcher } from 'features/LangSwitcher';
 
-interface SidebarProps {
-    className?: string;
-}
+type SidebarProps = {
+	className?: string;
+};
 
 const Sidebar = ({ className }: SidebarProps) => {
-    const [collapsed, setCollapsed] = useState(false);
+	const [collapsed, setCollapsed] = useState(false);
 
-    const onToggle = () => setCollapsed(prev => !prev);
+	const onToggle = () => {
+		setCollapsed(prev => !prev); 
+	};
     
-    return (
-        <aside className={classNames(styles.sidebar, {[styles.collapsed]: collapsed}, [className])}>
-            <Button
-                theme={ThemeButton.DEFAULT}
-                onClick={onToggle}
-                className='m-centred'
-            >
-                Toggle
-            </Button>
-            <ul className={styles.sidebar__switchers}>
-                <li className={styles.sidebar__switchersItem}>
-                    <ThemeSwitcher/>
-                </li>
-                <li className={styles.sidebar__switchersItem}>
-                    <LangSwitcher/>
-                </li>
-            </ul>
-        </aside>
-    );
+	return (
+		<aside className={classNames(styles.sidebar, { [styles.collapsed]: collapsed }, [className])}>
+			<Button
+				theme={ThemeButton.DEFAULT}
+				onClick={onToggle}
+				className='m-centred'
+			>
+				Toggle
+			</Button>
+			<ul className={styles.sidebar__switchers}>
+				<li className={styles.sidebar__switchersItem}>
+					<ThemeSwitcher/>
+				</li>
+				<li className={styles.sidebar__switchersItem}>
+					<LangSwitcher/>
+				</li>
+			</ul>
+		</aside>
+	);
 };
 
 export default Sidebar;

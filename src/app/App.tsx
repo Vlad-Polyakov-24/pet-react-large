@@ -7,19 +7,19 @@ import { Header } from 'widgets/Header';
 import { Sidebar } from 'widgets/Sidebar';
 
 const App = () => {
-    const {theme} = useTheme();
+	const { theme } = useTheme();
 
-    return (
-        <div className={classNames('app', {}, [theme])}>
-            <Suspense fallback=''>
-                <Header/>
-                <div className="page">
-                    <Sidebar/>
-                    <AppRouter/>
-                </div>
-            </Suspense>
-        </div>
-    );
+	return (
+		<div className={classNames('app', {}, [theme])}>
+			<Suspense fallback=''>
+				<Header/>
+				<div className="page">
+					<Sidebar/>
+					<AppRouter/>
+				</div>
+			</Suspense>
+		</div>
+	);
 };
 
 export default App;
