@@ -85,10 +85,11 @@ li {
   list-style: none;
 }
 
-/* reset text-decoration */
+/* reset text-decoration & color */
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 /* Improve readability when focused and also mouse hovered in all browsers */
@@ -98,13 +99,7 @@ a:hover {
   outline: 0;
 }
 
-/* reset color */
-
-a {
-  color: inherit;
-}
-
-/* set cursor pointer for accessibility */
+/* set cursor pointer for accessibility & set disabled condition */
 
 input[type="button"],
   /* 1 */
@@ -113,16 +108,7 @@ input[type="submit"],
 a[href],
 button {
   cursor: pointer;
-}
 
-/* set disabled condition */
-
-input[type="button"],
-  /* 1 */
-input[type="reset"],
-input[type="submit"],
-a[href],
-button {
   &:disabled,
   &.disabled {
     pointer-events: none;
