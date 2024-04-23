@@ -36,7 +36,7 @@ export default [
 					trailingUnderscore: 'allowSingleOrDouble',
 				},
 			],
-			'max-len': [2, { ignoreComments: true }],
+			'max-len': [2, { code: 120, ignoreComments: true }],
 		},
 	},
 ];
