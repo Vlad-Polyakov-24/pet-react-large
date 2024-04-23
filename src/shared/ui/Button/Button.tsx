@@ -4,6 +4,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 
 export enum ThemeButton {
 	DEFAULT = 'btn--default',
+	ERROR = 'btn--error',
 }
 
 type ButtonProps = {

@@ -10,6 +10,26 @@
     border: 2px solid var(--inverted-primary-color);
     border-radius: 5px;
     color: var(--inverted-secondary-color);
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: var(--inverted-primary-color);
+        color: var(--primary-color);
+      }
+    }
+  }
+  &--error {
+    padding: 5px 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    color: black;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: black;
+        color: white;
+      }
+    }
   }
 
   svg, path {

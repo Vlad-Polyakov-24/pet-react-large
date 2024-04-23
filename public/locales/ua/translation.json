@@ -2,5 +2,7 @@
   "language": "Українська",
   "main": "Головна",
   "about": "Про сайт",
-  "page not found": "Сторінка не знайдена!"
+  "page not found": "Сторінка не знайдена!",
+  "an error has occurred": "Трапилась помилка!",
+  "refresh the page": "Оновити сторінку"
 }
