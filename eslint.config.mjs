@@ -1,21 +1,19 @@
 import globals from 'globals';
 import pluginReactConfig from 'eslint-plugin-react/configs/recommended.js';
-
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { FlatCompat } from '@eslint/eslintrc';
 import pluginJs from '@eslint/js';
 
-// mimic CommonJS variables -- not needed if using CommonJS
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const compat = new FlatCompat({baseDirectory: __dirname, recommendedConfig: pluginJs.configs.recommended});
 
 export default [
-	...compat.extends('xo-typescript'),
+	{ languageOptions: { globals: globals.browser } },
 	pluginReactConfig,
-	{
-		languageOptions: { globals: globals.browser },
+	...compat.extends('xo-typescript'),
+	...compat.config({
 		rules: {
 			'object-curly-spacing': ['error', 'always'],
 			indent: [2, 'tab'],
@@ -36,7 +34,7 @@ export default [
 					trailingUnderscore: 'allowSingleOrDouble',
 				},
 			],
-			'max-len': [2, { code: 120, ignoreComments: true }],
+			'max-len': [2, { code: 140, ignoreComments: true }],
 		},
-	},
+	}),
 ];
