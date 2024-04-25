@@ -7,8 +7,8 @@ describe('Button', () => {
 		expect(screen.getByText('TEST')).toBeInTheDocument();
 	});
 
-	test('Button with class btn--default', () => {
-		render(<Button theme={ThemeButton.DEFAULT}>TEST</Button>);
-		expect(screen.getByText('TEST')).toHaveClass('btn--default');
+	test('Button with class btn--outline', () => {
+		render(<Button theme={ThemeButton.OUTLINE}>TEST</Button>);
+		expect(screen.getByText('TEST')).toHaveClass('btn--outline');
 	});
 });

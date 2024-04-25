@@ -3,7 +3,8 @@ import styles from './Button.module.scss';
 import { classNames } from 'shared/lib/classNames/classNames';
 
 export enum ThemeButton {
-	DEFAULT = 'btn--default',
+	CLEAR = 'btn--clear',
+	OUTLINE = 'btn--outline',
 	ERROR = 'btn--error',
 }
 

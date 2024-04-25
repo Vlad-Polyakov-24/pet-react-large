@@ -1,13 +1,15 @@
 .sidebar {
   display: flex;
   flex-direction: column;
-  width: var(--sidebar-width);
+  flex-grow: 1;
+  width: 100%;
+  max-width: var(--sidebar-width);
   padding: 20px 10px;
   background: var(--inverted-bg-color);
-  transition: width 0.3s;
+  transition: max-width 0.3s;
 
   &.collapsed {
-    width: var(--sidebar-width-collapsed);
+    max-width: var(--sidebar-width-collapsed);
   }
 
   &__switchers {
