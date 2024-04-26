@@ -3,8 +3,8 @@
 /* set border-box for all */
 
 *,
-*::before,
-*::after {
+*:before,
+*:after {
   box-sizing: border-box;
   text-size-adjust: none;
 }

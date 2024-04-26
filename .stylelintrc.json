@@ -8,6 +8,6 @@
     "scss/double-slash-comment-empty-line-before": null,
     "value-keyword-case": null,
     "selector-pseudo-element-colon-notation": "single",
-    "declaration-block-no-redundant-longhand-properties": false
+    "declaration-block-no-redundant-longhand-properties": null
   }
 }
