@@ -1,7 +1,6 @@
 import styles from './Header.module.scss';
 import { Link } from 'react-router-dom';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { Nav } from 'features/Nav';
 import Logo from 'shared/assets/icons/logo.svg';
 
 type HeaderProps = {
@@ -17,7 +16,6 @@ const Header = ({ className }: HeaderProps) => {
 						<Logo/>
 					</Link>
 				</strong>
-				<Nav/>
 			</div>
 		</header>
 	);

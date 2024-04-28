@@ -25,7 +25,7 @@ const AppNavLink: FC<AppNavLinkProps> = (props) => {
 	return (
 		<NavLink
 			to={to}
-			className={({ isActive }) => classNames(styles.navLink, {}, [className, isActive ? styles.active : '', styles[theme]])}
+			className={({ isActive }) => classNames(styles.navLink, { [styles.active]: isActive }, [className, styles[theme]])}
 			{...otherProps}
 		>
 			{children}

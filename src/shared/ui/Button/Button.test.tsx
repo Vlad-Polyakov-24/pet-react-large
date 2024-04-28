@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import Button, { ThemeButton } from './Button';
+import Button, { ButtonTheme } from './Button';
 
 describe('Button', () => {
 	test('Button in document', () => {
@@ -8,7 +8,7 @@ describe('Button', () => {
 	});
 
 	test('Button with class btn--outline', () => {
-		render(<Button theme={ThemeButton.OUTLINE}>TEST</Button>);
+		render(<Button theme={ButtonTheme.OUTLINE}>TEST</Button>);
 		expect(screen.getByText('TEST')).toHaveClass('btn--outline');
 	});
 });

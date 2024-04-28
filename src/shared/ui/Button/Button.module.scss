@@ -1,18 +1,21 @@
 .btn {
   position: relative;
   display: block;
-  width: 100%;
-  max-width: max-content;
+  width: max-content;
+  max-width: 100%;
+  padding: 5px 10px;
+  border-radius: 5px;
   cursor: pointer;
 
+  // styles
+
   &--clear {
+    padding: 0;
     width: auto;
     max-width: unset;
   }
   &--outline {
-    padding: 5px;
     border: 2px solid var(--primary-color);
-    border-radius: 5px;
     color: var(--primary-color);
 
     @media (hover: hover) {
@@ -22,10 +25,36 @@
       }
     }
   }
-  &--error {
-    padding: 5px 10px;
+  &--background {
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    border: none;
+  }
+  &--background-inverted {
+    background-color: var(--inverted-bg-color);
+    color: var(--inverted-primary-color);
+    border: none;
+  }
+  &--square {
+    padding: 0;
+    border-radius: 0;
+    aspect-ratio: 1;
+
+    &.btn--small {
+      width: var(--btn-size-s);
+    }
+    &.btn--medium {
+      width: var(--btn-size-m);
+    }
+    &.btn--large {
+      width: var(--btn-size-l);
+    }
+    &.btn--extra-large {
+      width: var(--btn-size-xl);
+    }
+  }
+  &--theme-inverted {
     border: 2px solid var(--inerted-theme-color);
-    border-radius: 5px;
     color: var(--inerted-theme-color);
 
     @media (hover: hover) {
@@ -36,10 +65,24 @@
     }
   }
 
+  // sizes
+
+  &--small {
+    font: var(--font-s);
+  }
+  &--medium {
+    font: var(--font-m);
+  }
+  &--large {
+    font: var(--font-l);
+  }
+  &--extra-large {
+    font: var(--font-xl);
+  }
+
   svg, path {
     display: block;
     width: 100%;
-    max-width: max-content;
     height: 100%;
   }
 }
