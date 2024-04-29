@@ -35,6 +35,19 @@ export default [
 				},
 			],
 			'max-len': [2, { code: 150, ignoreComments: true }],
+			'react-hooks/rules-of-hooks': 2,
+			'react-hooks/exhaustive-deps': 2,
 		},
+		plugins: [
+			'react-hooks',
+		],
+		overrides: [
+			{
+				files: ['**/src/**/*.{test,stories}.tsx'],
+				rules: {
+					'max-len': 0,
+				}
+			}
+		],
 	}),
 ];

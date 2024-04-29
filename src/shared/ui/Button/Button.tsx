@@ -5,6 +5,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 export enum ButtonTheme {
 	CLEAR = 'btn--clear',
 	OUTLINE = 'btn--outline',
+	OUTLINE_INVERTED = 'btn--outline-inverted',
 	THEME_INVERTED = 'btn--theme-inverted',
 	BACKGROUND = 'btn--background',
 	BACKGROUND_INVERTED = 'btn--background-inverted',

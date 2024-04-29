@@ -1,9 +1,12 @@
+body {
+  font: var(--font-m);
+}
+
 .app {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   background: var(--bg-color);
-  font: var(--font-m);
   color: var(--primary-color);
 }
 
