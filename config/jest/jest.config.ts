@@ -32,7 +32,7 @@ const config: Config = {
   },
   globals: {
     __IS_DEV__: true,
-  }
+  },
 };
 
 export default config;
