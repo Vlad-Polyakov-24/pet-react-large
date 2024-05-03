@@ -1,11 +1,8 @@
 .theme-switcher {
   max-width: 50px;
+  color: var(--bg-color);
 
-  &.light {
+  &.light_theme {
     color: #FFC700;
-  }
-
-  &.dark {
-    color: #0115C6;
   }
 }
