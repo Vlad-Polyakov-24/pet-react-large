@@ -5,5 +5,8 @@
   "page not found": "Сторінка не знайдена!",
   "an error has occurred": "Трапилась помилка!",
   "refresh the page": "Оновити сторінку",
-  "login": "Увійти"
+  "login": "Увійти",
+  "counter": "Лічильник",
+  "decrement": "Декремент",
+  "increment": "Інкремент"
 }

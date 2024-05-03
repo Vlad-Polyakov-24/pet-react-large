@@ -4,7 +4,7 @@
     "noImplicitAny": true,
     "module": "ESNext",
     "target": "es5",
-    "moduleResolution": "bundler",
+    "moduleResolution": "node",
     "esModuleInterop": true,
     "jsx": "react-jsx",
     "allowJs": true,
@@ -18,5 +18,5 @@
     "compilerOptions": {
       "module": "CommonJS"
     }
-  },
+  }
 }

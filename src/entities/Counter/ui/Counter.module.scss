@@ -1,0 +1,20 @@
+.counter {
+	width: 100%;
+	max-width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+	border: 2px solid var(--primary-color);
+	border-radius: 10px;
+
+	h1 {
+		text-align: center;
+	}
+
+	&__row {
+		display: flex;
+		justify-content: center;
+		gap: 10px;
+		margin-top: 10px;
+	}
+}
