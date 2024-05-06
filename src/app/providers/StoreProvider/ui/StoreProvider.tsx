@@ -5,11 +5,11 @@ import { Provider } from 'react-redux';
 
 type StoreProviderProps = {
 	children?: ReactNode;
-	initialState?: StateSchema;
+	initialState?: Partial<StateSchema>;
 };
 
 const StoreProvider = ({ children, initialState }: StoreProviderProps) => {
-	const store = createReduxStore(initialState);
+	const store = createReduxStore(initialState as StateSchema);
 
 	return (
 		<Provider store={store}>

@@ -8,5 +8,9 @@
   "login": "Login",
   "counter": "Counter",
   "decrement": "Decrement",
-  "increment": "increment"
+  "increment": "increment",
+  "your name": "Your name",
+  "password": "Password",
+  "enter your name": "Enter your name",
+  "enter your password": "Enter your password"
 }

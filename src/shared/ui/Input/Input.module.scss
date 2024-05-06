@@ -1,0 +1,28 @@
+.input-group {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+
+	&__label {
+		display: block;
+	}
+
+	.input {
+		display: block;
+		width: 100%;
+		padding: 10px;
+		background-color: transparent;
+		border: 2px solid var(--primary-color);
+		border-radius: 5px;
+		color: var(--inerted-theme-color);
+
+		&:focus {
+			outline: none;
+			border-color: var(--inverted-bg-color);
+		}
+		&::placeholder {
+			color: var(--inerted-theme-color);
+			opacity: .5;
+		}
+	}
+}

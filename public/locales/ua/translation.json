@@ -8,5 +8,9 @@
   "login": "Увійти",
   "counter": "Лічильник",
   "decrement": "Декремент",
-  "increment": "Інкремент"
+  "increment": "Інкремент",
+  "your name": "Ваше ім'я",
+  "password": "Пароль",
+  "enter your name": "Введіть ваше ім'я",
+  "enter your password": "Введіть ваш пароль"
 }

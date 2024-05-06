@@ -7,7 +7,7 @@ import i18nForTests from 'shared/config/i18n/i18nForTests';
 
 export type ComponentRenderOptions = {
 	route?: string;
-	initialState?: StateSchema;
+	initialState?: Partial<StateSchema>;
 };
 
 const ComponentRender = (component: ReactNode, options: ComponentRenderOptions = {}) => {
