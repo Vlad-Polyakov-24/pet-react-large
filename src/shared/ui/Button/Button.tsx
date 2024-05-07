@@ -23,6 +23,7 @@ type ButtonProps = {
 	theme?: ButtonTheme;
 	square?: boolean;
 	size?: ButtonSize;
+	disabled?: boolean;
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 
 const Button: FC<ButtonProps> = (props) => {
@@ -33,18 +34,21 @@ const Button: FC<ButtonProps> = (props) => {
 		type = 'button',
 		square,
 		size,
+		disabled,
 		...otherProps
 	} = props;
 
 	const mods = {
 		[styles.btnSquare]: square,
 		[styles[size]]: size,
+		[styles.btnDisabled]: disabled,
 	};
 
 	return (
 		<button
 			type={type}
 			className={classNames(styles.btn, mods, [className, styles[theme]])}
+			disabled={disabled}
 			{...otherProps}
 		>
 			{children}

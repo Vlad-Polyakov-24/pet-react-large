@@ -12,5 +12,8 @@
   "your name": "Ваше ім'я",
   "password": "Пароль",
   "enter your name": "Введіть ваше ім'я",
-  "enter your password": "Введіть ваш пароль"
+  "enter your password": "Введіть ваш пароль",
+  "authorization form": "Форма авторизації",
+  "invalid login or password entered": "Введено неправильний логін або пароль",
+  "logout": "Вийти"
 }

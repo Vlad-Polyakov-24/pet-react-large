@@ -12,5 +12,8 @@
   "your name": "Your name",
   "password": "Password",
   "enter your name": "Enter your name",
-  "enter your password": "Enter your password"
+  "enter your password": "Enter your password",
+  "authorization form": "Authorization form",
+  "invalid login or password entered": "Invalid login or password entered",
+  "logout": "Logout"
 }
