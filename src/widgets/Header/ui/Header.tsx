@@ -44,10 +44,7 @@ const Header = ({ className }: HeaderProps) => {
 						<Button theme={ButtonTheme.OUTLINE_INVERTED} onClick={onToggleModal}>
 							{t('login')}
 						</Button>
-						<LoginModal
-							isOpen={isAuthModal}
-							onClose={onToggleModal}
-						/>
+						{ isAuthModal && <LoginModal isOpen={isAuthModal} onClose={onToggleModal}/> }
 					</>
 				)}
 			</div>
