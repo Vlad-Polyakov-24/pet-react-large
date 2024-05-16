@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import styles from './NotFoundPage.module.scss';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
@@ -7,7 +8,7 @@ type NotFoundPageProps = {
 	className?: string;
 };
 
-const NotFoundPage = ({ className }: NotFoundPageProps) => {
+const NotFoundPage = memo(({ className }: NotFoundPageProps) => {
 	const { t } = useTranslation();
 
 	return (
@@ -17,6 +18,6 @@ const NotFoundPage = ({ className }: NotFoundPageProps) => {
 			</Container>
 		</div>
 	);
-};
+});
 
 export default NotFoundPage;

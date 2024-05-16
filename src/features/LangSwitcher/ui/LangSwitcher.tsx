@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import styles from './LangSwitcher.module.scss';
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
@@ -7,7 +8,7 @@ type LangSwitcherProps = {
 	className?: string;
 };
 
-const LangSwitcher = ({ className }: LangSwitcherProps) => {
+const LangSwitcher = memo(({ className }: LangSwitcherProps) => {
 	const { i18n } = useTranslation();
 
 	const toggleLang = async () => {
@@ -23,6 +24,6 @@ const LangSwitcher = ({ className }: LangSwitcherProps) => {
 			{i18n.language === 'ua' ? '🇬🇧' : '🇺🇦'}
 		</Button>
 	);
-};
+});
 
 export default LangSwitcher;

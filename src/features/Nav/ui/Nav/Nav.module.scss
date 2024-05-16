@@ -1,0 +1,20 @@
+.nav {
+  flex-shrink: 0;
+
+  &--sidebar {
+    .nav__list {
+      flex-direction: column;
+    }
+  }
+  &--footer {
+    .nav__list {
+      gap: 20px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 10px;
+    height: 100%;
+  }
+}

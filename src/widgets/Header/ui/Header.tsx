@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react';
+import { memo, useCallback, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import styles from './Header.module.scss';
@@ -13,7 +13,7 @@ type HeaderProps = {
 	className?: string;
 };
 
-const Header = ({ className }: HeaderProps) => {
+const Header = memo(({ className }: HeaderProps) => {
 	const { t } = useTranslation();
 	const [isAuthModal, setIsAuthModal] = useState(false);
 	const authData = useSelector(getUserAuthData);
@@ -24,7 +24,6 @@ const Header = ({ className }: HeaderProps) => {
 	}, []);
 
 	const onLogout = useCallback(() => {
-		setIsAuthModal(false);
 		dispatch(userActions.logout());
 	}, [dispatch]);
 
@@ -50,6 +49,6 @@ const Header = ({ className }: HeaderProps) => {
 			</div>
 		</header>
 	);
-};
+});
 
 export default Header;

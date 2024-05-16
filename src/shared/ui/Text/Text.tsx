@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import styles from './Text.module.scss';
 import { classNames } from 'shared/lib/classNames/classNames';
 
@@ -13,7 +14,7 @@ type TextProps = {
 	theme?: TextTheme;
 };
 
-const Text = (props: TextProps) => {
+const Text = memo((props: TextProps) => {
 	const {
 		className,
 		title,
@@ -27,6 +28,6 @@ const Text = (props: TextProps) => {
 			{description && <p className={styles.text__description}>{description}</p>}
 		</div>
 	);
-};
+});
 
 export default Text;

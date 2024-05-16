@@ -1,14 +1,14 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import Header from './Header';
+import ProfilePage from './ProfilePage';
 import ThemeDecorator from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
 import StoreDecorator from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 
 const meta = {
-	title: 'widgets/Header',
-	component: Header,
+	title: 'pages/ProfilePage',
+	component: ProfilePage,
 	tags: ['autodocs'],
-} satisfies Meta<typeof Header>;
+} satisfies Meta<typeof ProfilePage>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -25,5 +25,3 @@ export const Dark: Story = {
 		StoreDecorator({}),
 	],
 };
-
-

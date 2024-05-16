@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import styles from './PageError.module.scss';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
@@ -7,7 +8,7 @@ type PageErrorProps = {
 	className?: string;
 };
 
-const PageError = ({ className }: PageErrorProps) => {
+const PageError = memo(({ className }: PageErrorProps) => {
 	const { t } = useTranslation();
 
 	const onReload = () => {
@@ -22,6 +23,6 @@ const PageError = ({ className }: PageErrorProps) => {
 			</Button>
 		</div>
 	);
-};
+});
 
 export default PageError;

@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import styles from './Footer.module.scss';
 import { Link } from 'react-router-dom';
 import { classNames } from 'shared/lib/classNames/classNames';
@@ -10,7 +11,7 @@ type FooterProps = {
 	className?: string;
 };
 
-const Footer = ({ className }: FooterProps) => {
+const Footer = memo(({ className }: FooterProps) => {
 	return (
 		<footer className={classNames(styles.footer, {}, [className])}>
 			<Container>
@@ -26,6 +27,6 @@ const Footer = ({ className }: FooterProps) => {
 			</Container>
 		</footer>
 	);
-};
+});
 
 export default Footer;

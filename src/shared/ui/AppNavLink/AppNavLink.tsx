@@ -1,4 +1,4 @@
-import { type FC } from 'react';
+import { memo } from 'react';
 import styles from './AppNavLink.module.scss';
 import { NavLink, type NavLinkProps } from 'react-router-dom';
 import { classNames } from 'shared/lib/classNames/classNames';
@@ -13,7 +13,7 @@ type AppNavLinkProps = {
 	theme?: AppNavLinkTheme;
 } & NavLinkProps;
 
-const AppNavLink: FC<AppNavLinkProps> = (props) => {
+const AppNavLink = memo((props: AppNavLinkProps) => {
 	const {
 		to,
 		className,
@@ -31,6 +31,6 @@ const AppNavLink: FC<AppNavLinkProps> = (props) => {
 			{children}
 		</NavLink>
 	);
-};
+});
 
 export default AppNavLink;

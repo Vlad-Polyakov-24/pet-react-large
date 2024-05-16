@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import Container from 'shared/ui/Container/Container';
 
-const AboutPage = () => {
+const AboutPage = memo(() => {
 	const { t } = useTranslation('about');
 
 	return (
@@ -12,6 +12,6 @@ const AboutPage = () => {
 			</Container>
 		</section>
 	);
-};
+});
 
 export default AboutPage;

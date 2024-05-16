@@ -1,7 +1,6 @@
 import styles from './LoginForm.module.scss';
 import { type FormEvent, memo, useCallback } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { type Dispatch } from '@reduxjs/toolkit';
+import { useSelector } from 'react-redux';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { loginActions, loginReducer } from '../../model/slice/loginSlice';
 import { useTranslation } from 'react-i18next';
@@ -14,18 +13,21 @@ import Input from 'shared/ui/Input/Input';
 import loginByUsername from '../../model/sevices/loginByUsername/loginByUsername';
 import Text, { TextTheme } from 'shared/ui/Text/Text';
 import DynamicModuleLoader, { type ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import useAppDispatch from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { type Dispatch } from '@reduxjs/toolkit';
 
 type LoginFormProps = {
 	className?: string;
+	onSuccess?: () => void;
 };
 
 const initialReducers: ReducersList = {
 	loginForm: loginReducer,
 };
 
-const LoginForm = memo(({ className }: LoginFormProps) => {
+const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
 	const { t } = useTranslation();
-	const dispatch: Dispatch<any> = useDispatch();
+	const dispatch: Dispatch<any> = useAppDispatch();
 	const username = useSelector(getLoginUsername);
 	const password = useSelector(getLoginPassword);
 	const error = useSelector(getLoginError);
@@ -39,13 +41,19 @@ const LoginForm = memo(({ className }: LoginFormProps) => {
 		dispatch(loginActions.setPassword(value));
 	}, [dispatch]);
 
-	const onSubmit = useCallback((e: FormEvent) => {
+	const onSubmit = useCallback(async (e: FormEvent) => {
 		e.preventDefault();
-		dispatch(loginByUsername({ username, password }));
-	}, [dispatch, password, username]);
+		// eslint-disable-next-line
+		const result: any = await dispatch(loginByUsername({ username, password }));
+
+		if (result.meta.requestStatus === 'fulfilled') {
+			onSuccess();
+		}
+
+	}, [dispatch, password, username, onSuccess]);
 
 	return (
-		<DynamicModuleLoader removeAfterUnmount reducers={initialReducers}>
+		<DynamicModuleLoader reducers={initialReducers} removeAfterUnmount>
 			<form className={classNames(styles.form, {}, [className])} onSubmit={onSubmit}>
 				<Text title={t('authorization form')}/>
 				{error && <Text theme={TextTheme.ERROR} description={t('invalid login or password entered')}/>}

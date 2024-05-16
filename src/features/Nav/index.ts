@@ -1,3 +1,3 @@
-import Nav from './ui/Nav';
+import Nav from './ui/Nav/Nav';
 
 export { Nav };
