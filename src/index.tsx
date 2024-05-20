@@ -8,13 +8,13 @@ import { ThemeProvider } from 'app/providers/ThemeProvider';
 import App from 'app/App';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-	<StoreProvider>
-		<BrowserRouter>
+	<BrowserRouter>
+		<StoreProvider>
 			<ErrorBoundary>
 				<ThemeProvider>
 					<App />
 				</ThemeProvider>
 			</ErrorBoundary>
-		</BrowserRouter>
-	</StoreProvider>,
+		</StoreProvider>
+	</BrowserRouter>,
 );
