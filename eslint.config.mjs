@@ -39,6 +39,7 @@ export default [
 			'react-hooks/rules-of-hooks': 2,
 			'react-hooks/exhaustive-deps': 2,
 			'react/display-name': 0,
+			'@typescript-eslint/no-unnecessary-type-assertion': 0,
 		},
 		plugins: [
 			'react-hooks',

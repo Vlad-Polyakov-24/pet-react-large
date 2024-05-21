@@ -28,7 +28,7 @@ const config: StorybookConfig = {
     }
   }),
   webpackFinal: async (config, { configType }) => {
-    config.resolve.plugins = [new TsconfigPathsPlugin()];
+    config!.resolve!.plugins = [new TsconfigPathsPlugin()];
     return config;
   }
 };

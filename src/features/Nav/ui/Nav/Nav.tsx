@@ -11,7 +11,7 @@ type NavProps = {
 	collapsed?: boolean;
 };
 
-const Nav = memo(({ className, place, icons, collapsed = false }: NavProps) => {
+const Nav = memo(({ className, place, icons = false, collapsed = false }: NavProps) => {
 	const mods = {
 		[styles.navHeader]: place === 'header',
 		[styles.navFooter]: place === 'footer',
