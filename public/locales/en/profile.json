@@ -1,6 +1,16 @@
 {
-  "profile page": "Profile Page",
+  "profile": "Profile",
   "edit": "Edit",
+  "an error occurred while loading the profile": "An error occurred while loading the profile!",
+  "try refreshing the page": "Try refreshing the page!",
+  "save": "Save",
+  "cancel": "Cancel",
   "your firstname": "Your firstname",
-  "your lastname": "Your lastname"
+  "your lastname": "Your lastname",
+  "your age": "Your age",
+  "your city": "Your city",
+  "username": "Username",
+  "avatar url": "Avatar url",
+  "your currency": "Your currency",
+  "your country": "Your country"
 }

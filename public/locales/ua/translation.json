@@ -16,5 +16,6 @@
   "enter your password": "Введіть ваш пароль",
   "authorization form": "Форма авторизації",
   "invalid login or password entered": "Введено неправильний логін або пароль",
-  "logout": "Вийти"
+  "logout": "Вийти",
+  "no content": "Немає контенту"
 }

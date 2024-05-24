@@ -1,0 +1,32 @@
+.select {
+	display: grid;
+	gap: 5px;
+
+	&__label {
+		display: block;
+	}
+
+	&__item {
+		background-color: transparent;
+		outline: none;
+		color: var(--primary-color);
+		padding: 9px 15px 9px 10px;
+		border: 2px solid var(--primary-color);
+		border-radius: 5px;
+		cursor: pointer;
+
+		option {
+			color: var(--inverted-primary-color);
+			background-color: var(--inverted-bg-color);
+		}
+
+		&:disabled {
+			opacity: 1;
+			cursor: auto;
+		}
+	}
+
+	&.disabled {
+		opacity: .8;
+	}
+}

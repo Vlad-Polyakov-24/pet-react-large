@@ -25,6 +25,17 @@
       }
     }
   }
+  &--outline-red {
+    border: 2px solid var(--red-light);
+    color: var(--red-light);
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: var(--red-dark);
+        color: var(--primary-color);
+      }
+    }
+  }
   &--outline-inverted {
     border: 2px solid var(--inverted-primary-color);
     color: var(--inverted-primary-color);

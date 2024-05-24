@@ -1,13 +1,12 @@
-.input-group {
-	display: flex;
-	flex-direction: column;
+.input {
+	display: grid;
 	gap: 5px;
 
 	&__label {
 		display: block;
 	}
 
-	.input {
+	&__item {
 		display: block;
 		width: 100%;
 		padding: 10px;
@@ -24,5 +23,12 @@
 			color: var(--inerted-theme-color);
 			opacity: .5;
 		}
+		&:read-only {
+			pointer-events: none;
+		}
+	}
+
+	&.readonly {
+		opacity: .8;
 	}
 }

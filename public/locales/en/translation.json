@@ -16,5 +16,6 @@
   "enter your password": "Enter your password",
   "authorization form": "Authorization form",
   "invalid login or password entered": "Invalid login or password entered",
-  "logout": "Logout"
+  "logout": "Logout",
+  "no content": "No content"
 }

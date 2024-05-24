@@ -4,6 +4,8 @@ import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
 import AppNavLink, { AppNavLinkTheme } from 'shared/ui/AppNavLink/AppNavLink';
 import { type NavItemType } from '../../model/NavItems';
+import { useSelector } from 'react-redux';
+import { getUserAuthData } from 'entities/User';
 
 type NavItemProps = {
 	item: NavItemType;
@@ -13,6 +15,9 @@ type NavItemProps = {
 
 const NavItem = memo(({ item, collapsed, icon }: NavItemProps) => {
 	const { t } = useTranslation();
+	const isAuth = useSelector(getUserAuthData);
+
+	if (item.authOnly && !isAuth) return null;
 
 	return (
 		<li>

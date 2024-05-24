@@ -1,6 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { ThunkConfig } from 'app/providers/StoreProvider';
-import { Profile } from '../../types/profile';
+import type { ThunkConfig } from 'app/providers/StoreProvider';
+import type { Profile } from '../../types/profile';
 
 const fetchProfileData = createAsyncThunk<Profile, void, ThunkConfig<string>>(
 	'profile/fetchProfileData',

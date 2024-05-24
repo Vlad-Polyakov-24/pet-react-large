@@ -1,0 +1,14 @@
+.card {
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 10px;
+	}
+
+	&__header-buttons {
+		display: flex;
+		gap: 5px;
+	}
+}

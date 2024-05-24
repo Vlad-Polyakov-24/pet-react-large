@@ -1,6 +1,16 @@
 {
-  "profile page": "Сторінка профілю",
+  "profile": "Профіль",
   "edit": "Редагувати",
+  "an error occurred while loading the profile": "Під час завантаження профілю сталась помилка!",
+  "try refreshing the page": "Спробуйте оновити сторінку!",
+  "save": "Зберегти",
+  "cancel": "Відмінити",
   "your firstname": "Ваше ім'я",
-  "your lastname": "Ваше прізвище"
+  "your lastname": "Ваше прізвище",
+  "your age": "Ваш вік",
+  "your city": "Ваше місто",
+  "username": "Ім'я користувача",
+  "avatar url": "Посилання на аватар",
+  "your currency": "Ваша валюта",
+  "your country": "Ваша країна"
 }

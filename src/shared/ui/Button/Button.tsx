@@ -1,10 +1,11 @@
-import { type ButtonHTMLAttributes, type FC, memo } from 'react';
+import { type ButtonHTMLAttributes, memo } from 'react';
 import styles from './Button.module.scss';
 import { classNames, type Mods } from 'shared/lib/classNames/classNames';
 
 export enum ButtonTheme {
 	CLEAR = 'btn--clear',
 	OUTLINE = 'btn--outline',
+	OUTLINE_RED = 'btn--outline-red',
 	OUTLINE_INVERTED = 'btn--outline-inverted',
 	THEME_INVERTED = 'btn--theme-inverted',
 	BACKGROUND = 'btn--background',
