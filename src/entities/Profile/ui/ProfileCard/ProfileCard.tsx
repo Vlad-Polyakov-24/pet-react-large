@@ -20,6 +20,7 @@ const ProfileCard = (props: ProfileCardProps) => {
 		error,
 		isLoading,
 		readonly,
+		validateErrors,
 		onChangeFirstname,
 		onChangeLastname,
 		onChangeAge,
@@ -71,6 +72,7 @@ const ProfileCard = (props: ProfileCardProps) => {
 				onChangeAvatar={onChangeAvatar}
 				onChangeCurrency={onChangeCurrency}
 				onChangeCountry={onChangeCountry}
+				validateErrors={validateErrors}
 			/>
 		</div>
 	);

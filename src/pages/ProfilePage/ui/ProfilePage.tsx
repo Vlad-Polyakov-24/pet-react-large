@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import {
 	fetchProfileData,
 	getProfileError, getProfileForm,
-	getProfileIsLoading, getProfileReadonly, profileActions,
+	getProfileIsLoading, getProfileReadonly, getProfileValidateErrors, profileActions,
 	ProfileCard,
 	profileReducer,
 } from 'entities/Profile';
@@ -23,6 +23,7 @@ const ProfilePage = memo(() => {
 	const error = useSelector(getProfileError);
 	const isLoading = useSelector(getProfileIsLoading);
 	const readonly = useSelector(getProfileReadonly);
+	const validateErrors = useSelector(getProfileValidateErrors);
 
 	useEffect(() => {
 		void dispatch(fetchProfileData());
@@ -77,6 +78,7 @@ const ProfilePage = memo(() => {
 						onChangeAvatar={onChangeAvatar}
 						onChangeCurrency={onChangeCurrency}
 						onChangeCountry={onChangeCountry}
+						validateErrors={validateErrors}
 					/>
 				</Container>
 			</section>

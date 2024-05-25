@@ -1,6 +1,7 @@
 import { type ChangeEvent, type InputHTMLAttributes, memo } from 'react';
 import styles from './Input.module.scss';
 import { classNames, type Mods } from 'shared/lib/classNames/classNames';
+import Text, { TextTheme } from 'shared/ui/Text/Text';
 
 type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange' | 'readOnly'>;
 
@@ -10,6 +11,7 @@ type InputProps = {
 	onChange?: (value: string) => void;
 	label?: string;
 	readonly?: boolean;
+	error?: string;
 } & HTMLInputProps;
 
 const Input = memo((props: InputProps) => {
@@ -21,6 +23,7 @@ const Input = memo((props: InputProps) => {
 		label,
 		id,
 		readonly,
+		error,
 		...otherProps
 	} = props;
 	const mods: Mods = {
@@ -34,6 +37,7 @@ const Input = memo((props: InputProps) => {
 	return (
 		<div className={classNames(styles.input, mods, [className])}>
 			{label && <label htmlFor={id} className={styles.input__label}>{label}</label>}
+			{error && <Text theme={TextTheme.ERROR} className={styles.input__error} description={error}/>}
 			<input
 				className={styles.input__item}
 				type={type}

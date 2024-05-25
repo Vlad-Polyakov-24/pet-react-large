@@ -1,4 +1,5 @@
 .input {
+	position: relative;
 	display: grid;
 	gap: 5px;
 
@@ -26,6 +27,12 @@
 		&:read-only {
 			pointer-events: none;
 		}
+	}
+
+	&__error {
+		position: absolute;
+		top: 0;
+		right: 0;
 	}
 
 	&.readonly {

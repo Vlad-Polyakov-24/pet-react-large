@@ -5,12 +5,19 @@
   "try refreshing the page": "Try refreshing the page!",
   "save": "Save",
   "cancel": "Cancel",
-  "your firstname": "Your firstname",
-  "your lastname": "Your lastname",
+  "your firstname": "Your first name",
+  "your lastname": "Your last name",
   "your age": "Your age",
   "your city": "Your city",
   "username": "Username",
   "avatar url": "Avatar url",
   "your currency": "Your currency",
-  "your country": "Your country"
+  "your country": "Your country",
+  "server error while saving": "Server error while saving",
+  "data not specified": "Data not specified",
+  "firstname is required": "First name is required",
+  "lastname is required": "Last name is required",
+  "invalid age": "Invalid age",
+  "city is required": "City is required",
+  "username is required": "Username is required"
 }

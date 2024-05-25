@@ -12,5 +12,12 @@
   "username": "Ім'я користувача",
   "avatar url": "Посилання на аватар",
   "your currency": "Ваша валюта",
-  "your country": "Ваша країна"
+  "your country": "Ваша країна",
+  "server error while saving": "Серверна помилка при збереженні",
+  "data not specified": "Дані не вказано",
+  "firstname is required": "Ім'я обов'язкове",
+  "lastname is required": "Прізвище обов'язкове",
+  "invalid age": "Неправильний вік",
+  "city is required": "Місто обов'язкове",
+  "username is required": "Ім'я користувача обов'язкове"
 }
