@@ -2,6 +2,7 @@ import { memo, useCallback, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import styles from './Header.module.scss';
+import { RoutePath } from 'app/providers/AppRouter';
 import Logo from 'shared/assets/icons/logo.svg';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
@@ -31,7 +32,7 @@ const Header = memo(({ className }: HeaderProps) => {
 		<header className={classNames(styles.header, {}, [className])}>
 			<div className={styles.header__container}>
 				<strong className={styles.header__logo}>
-					<Link to='/' className={styles.header__logoLink}>
+					<Link to={RoutePath.main} className={styles.header__logoLink}>
 						<Logo/>
 					</Link>
 				</strong>

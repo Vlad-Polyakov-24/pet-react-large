@@ -12,12 +12,17 @@ export const useTheme = (): UseThemeResult => {
 
     const toggleTheme = () => {
       let newTheme: Theme;
+
       switch (theme) {
           case Theme.DARK: {
               newTheme = Theme.LIGHT;
               break;
           }
           case Theme.LIGHT: {
+              newTheme = Theme.ORANGE;
+              break;
+          }
+          case Theme.ORANGE: {
               newTheme = Theme.DARK;
               break;
           }
@@ -25,6 +30,7 @@ export const useTheme = (): UseThemeResult => {
               newTheme = Theme.LIGHT;
           }
       }
+
       setTheme?.(newTheme);
       localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newTheme);
     };

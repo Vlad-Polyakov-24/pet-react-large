@@ -1,12 +1,13 @@
-import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { AppRouter } from 'app/providers/router';
+import { useDispatch, useSelector } from 'react-redux';
+import { AppRouter } from 'app/providers/AppRouter';
+import { getUserMounted, userActions } from 'entities/User';
 import { Header } from 'widgets/Header';
 import { Sidebar } from 'widgets/Sidebar';
-import { userActions } from 'entities/User';
 
 const App = () => {
 	const dispatch = useDispatch();
+	const userMounted = useSelector(getUserMounted);
 
 	useEffect(() => {
 		dispatch(userActions.initAuthData());
@@ -17,7 +18,9 @@ const App = () => {
 			<Header/>
 			<div className='page'>
 				<Sidebar/>
-				<AppRouter/>
+				<main className='main'>
+					{userMounted && <AppRouter/>}
+				</main>
 			</div>
 		</div>
 	);
