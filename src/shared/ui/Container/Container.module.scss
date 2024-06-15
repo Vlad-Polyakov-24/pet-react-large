@@ -2,11 +2,14 @@
   display: block;
   box-sizing: border-box;
   max-width: var(--container-width);
-  width: calc(100% - (var(--container-gap) * 2));
+  width: 100%;
   margin-right: auto;
   margin-left: auto;
 
   &--fluid {
     max-width: 100%;
+  }
+  &--gap {
+    width: calc(100% - (var(--container-gap) * 2));
   }
 }

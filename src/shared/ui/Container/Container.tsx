@@ -1,15 +1,22 @@
 import { type HTMLProps } from 'react';
+import { classNames, type Mods } from 'shared/lib/classNames/classNames';
 import styles from './Container.module.scss';
-import { classNames } from 'shared/lib/classNames/classNames';
 
 type ContainerProps = {
 	className?: string;
 	fluid?: boolean;
+	gap?: boolean;
 } & HTMLProps<HTMLElement>;
 
-const Container = ({ className, children, fluid }: ContainerProps) => {
+const Container = (props: ContainerProps) => {
+	const { className, children, fluid, gap } = props;
+	const mods: Mods = {
+		[styles.containerFluid]: fluid,
+		[styles.containerGap]: gap,
+	};
+
 	return (
-		<div className={classNames(styles.container, { [styles.containerFluid]: fluid }, [className])}>
+		<div className={classNames(styles.container, mods, [className])}>
 			{children}
 		</div>
 	);
